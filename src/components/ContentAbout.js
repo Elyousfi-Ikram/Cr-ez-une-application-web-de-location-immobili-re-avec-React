@@ -25,7 +25,7 @@ function ContentAbout() {
             <div className="select-content">
                 <button className="select-title">
                     Fiabilité
-                    {openSections.fiabilite ? <FaChevronUp onClick={() => toggleSection("fiabilite")}/> : <FaChevronDown onClick={() => toggleSection("fiabilite")}/>}
+                    {openSections.fiabilite ? <FaChevronDown onClick={() => toggleSection("fiabilite")}/> : <FaChevronUp onClick={() => toggleSection("fiabilite")}/>}
                 </button>
                 {openSections.fiabilite && (
                     <div className="select-text">
@@ -41,7 +41,7 @@ function ContentAbout() {
             <div className="select-content">
                 <button className="select-title">
                     Respect
-                    {openSections.fiabilite ? <FaChevronUp onClick={() => toggleSection("respect")}/> : <FaChevronDown onClick={() => toggleSection("respect")}/>}
+                    {openSections.respect ? <FaChevronDown onClick={() => toggleSection("respect")}/> : <FaChevronUp onClick={() => toggleSection("respect")}/>}
                 </button>
                 {openSections.respect && (
                     <div className="select-text">
@@ -57,7 +57,7 @@ function ContentAbout() {
             <div className="select-content">
                 <button className="select-title" >
                     Service
-                    {openSections.service ? <FaChevronUp onClick={() => toggleSection("service")}/> : <FaChevronDown onClick={() => toggleSection("service")}/>}
+                    {openSections.service ? <FaChevronDown onClick={() => toggleSection("service")}/> : <FaChevronUp onClick={() => toggleSection("service")}/>}
                 </button>
                 {openSections.service && (
                     <div className="select-text">
@@ -74,7 +74,7 @@ function ContentAbout() {
             <div className="select-content">
                 <button className="select-title">
                     Sécurité
-                    {openSections.securite ? <FaChevronUp onClick={() => toggleSection("securite")}/> : <FaChevronDown onClick={() => toggleSection("securite")}/>}
+                    {openSections.securite ? <FaChevronDown onClick={() => toggleSection("securite")}/> : <FaChevronUp onClick={() => toggleSection("securite")}/>}
                 </button>
                 {openSections.securite && (
                     <div className="select-text">

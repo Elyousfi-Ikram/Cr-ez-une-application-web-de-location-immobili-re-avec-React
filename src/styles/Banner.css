@@ -3,8 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 100px 60px 100px;
+    margin: 40px 90px;
     width: 1282px;
+    font-size: 20px;
 }
 
 .logo-kasa {
