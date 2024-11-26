@@ -1,0 +1,42 @@
+.collapse {
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        height: 40px;
+        border-radius: 5px;
+        padding: 0 15px;
+        background-color: #FF6060;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+        border: none;
+    }
+
+    &-text {
+        margin-top: -20px;
+        padding: 20px 20px 5px 20px;
+        background-color: #F6F6F673;
+        border-radius: 5px;
+    }
+}
+
+.select {
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &-title {
+        width: 1050px;
+    }
+
+    &-text {
+        width: 1010px;
+    }
+}

@@ -1,0 +1,33 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 90px;
+    width: 1282px;
+    font-size: 20px;
+  
+    .logo-kasa {
+      height: 100%;
+    }
+  
+    .banner-link {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+      height: 100%;
+  
+      a {
+        color: black;
+        text-decoration: none;
+  
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
