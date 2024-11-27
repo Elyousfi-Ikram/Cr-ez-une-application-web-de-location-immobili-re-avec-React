@@ -8,7 +8,6 @@
     margin-bottom: 50px;
     max-width: 1282px;
 
-
     .logement-card {
         position: relative;
         width: 350px;
@@ -16,7 +15,6 @@
         margin: 38px;
         border-radius: 10px;
         display: block;
-
 
         &:hover {
             transform: scale(102%);
@@ -50,5 +48,4 @@
             }
         }
     }
-
 }

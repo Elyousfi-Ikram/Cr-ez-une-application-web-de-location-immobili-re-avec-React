@@ -9,10 +9,8 @@ import InfoLogement from "./pages/infoLogement/InfoLogement.js";
 
 import Erreur from "./pages/erreur/erreur.js";
 
-
 import logo from '../src/assets/logo.png'
 import logements from '../src/datas/logements.json';
-
 
 function App() {
   return (

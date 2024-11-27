@@ -4,9 +4,7 @@ import "../about/contentAbout.scss";
 import '../../components/collapse/collapse.scss';
 import '../../assets/img-header-accueil.png';
 
-
 function ContentAbout() {
-    // Un objet pour gérer l'état de chaque section
     const [openSections, setOpenSections] = useState({
         fiabilite: false,
         respect: false,
@@ -14,11 +12,10 @@ function ContentAbout() {
         securite: false,
     });
 
-    // Fonction pour gérer le clic sur une section
     const toggleSection = (section) => {
         setOpenSections(prevState => ({
             ...prevState,
-            [section]: !prevState[section],  // Change l'état de la section cliquée
+            [section]: !prevState[section],  
         }));
     };
 

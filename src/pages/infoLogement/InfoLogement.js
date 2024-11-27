@@ -69,7 +69,6 @@ function InfoLogement({ logements }) {
                 </p>
             </div>
 
-            {/* Modale */}
             {isModalOpen && (
                 <div className="modal" onClick={closeModal}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>

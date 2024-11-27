@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function GalleryCard({ data }) {
+function GalleryCard({ data }) { 
 
     return (
         <Link to={ `/gallery/${data.id}` } key={data.id} className='logement-card'>
