@@ -16,7 +16,9 @@
     "start": "react-scripts start --source-map",
     "build": "react-scripts build --source-map",
     "test": "react-scripts test --source-map",
-    "eject": "react-scripts eject --source-map"
+    "eject": "react-scripts eject --source-map",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,10 +41,12 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.2.0",
     "postcss-loader": "^8.1.1",
     "react-scripts": "^5.0.1",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3"
-  }
+  },
+  "homepage": "https://votre-nom-utilisateur.github.io/votre-repo"
 }
