@@ -1,0 +1,140 @@
+$main-color: #FF6060;
+$secondary-color: #E3E3E3;
+$btn-hover-color: white;
+$btn-color: rgb(181, 181, 181);
+$font-family: 'Montserrat';
+$max-width: 1282px;
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.main-color {
+  color: $main-color;
+}
+
+.main-scd-color {
+  color: $secondary-color;
+}
+
+.gallery-card {
+  @include flex-center(column, space-between, center);
+  margin: 40px 100px;
+}
+
+.carousel-image {
+  width: $max-width;
+  height: 415px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.carousel-index {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 185px;
+  left: 50%;
+  font-weight: bolder;
+  color: $btn-hover-color;
+}
+
+.btn-left,
+.btn-right {
+  position: absolute;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-family: $font-family;
+  font-size: 50px;
+  color: $btn-color;
+
+  &:hover {
+    color: $btn-hover-color;
+  }
+}
+
+.btn-left {
+  top: 300px;
+  left: 95px;
+}
+
+.btn-right {
+  top: 300px;
+  right: 95px;
+}
+
+.title-location-name-picture {
+  @include flex-center(row, space-between);
+  width: $max-width;
+}
+
+.title-location > * {
+  @include flex-center(row, start, center);
+  margin-bottom: 0;
+}
+
+.title {
+  height: 36px;
+  margin-top: 0;
+  font-size: 36px;
+  color: $main-color;
+}
+
+.location {
+  margin: 5px 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.name-picture {
+  @include flex-center(row, flex-end, flex-start);
+  gap: 10px;
+}
+
+.name {
+  width: 80px;
+  height: 52px;
+  margin-top: 5px;
+  text-align: end;
+  font-size: 15px;
+  color: $main-color;
+}
+
+.picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.tags-rating {
+  @include flex-center(row, space-between);
+  width: $max-width;
+  margin-bottom: 15px;
+}
+
+.tags-container {
+  @include flex-center(row);
+  gap: 20px;
+}
+
+.tags {
+  min-width: max-content;
+  padding: 3px 25px 5px 25px;
+  border-radius: 10px;
+  background-color: $main-color;
+  color: $btn-hover-color;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rating {
+  @include flex-center(row, space-between);
+  width: 140px;
+  height: 50px;
+  font-size: 20px;
+}

@@ -1,0 +1,67 @@
+.collapse-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 15px;
+  background-color: #FF6060;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+}
+
+.collapse-text {
+  margin-top: -10px;
+  background-color: rgba(246, 246, 246, 0.45);
+  border-radius: 5px;
+}
+
+.collapse-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3%;
+
+  .collapse-about-title,
+  .collapse-about-text {
+    width: 1050px;
+  }
+
+  .collapse-about-text {
+    width: 1010px;
+  }
+}
+
+.collapse-logement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1282px;
+  margin: 20px 0 50px;
+
+  .btn-description,
+  .btn-equipments {
+    width: 600px;
+    position: relative;
+  }
+
+  .btn-description-text,
+  .btn-equipments-text {
+    width: 600px;
+    height: 145px;
+    padding: 30px 20px;
+  }
+}
+
+.equipment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

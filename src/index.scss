@@ -1,17 +1,14 @@
-$body-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-$code-font-stack: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+// Définition des variables de police
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 body {
   margin: 0;
-  font-family: $body-font-stack;
+  font-family: $font-family-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
+  
+  code {
+    font-family: $font-family-code;
+  }
 }
-
-code {
-  font-family: $code-font-stack;
-}
-
