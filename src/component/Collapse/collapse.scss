@@ -15,9 +15,18 @@
 }
 
 .collapse-text {
-  margin-top: -10px;
+  margin-top: -7px;
+  max-height: 0;
+  overflow: hidden;
   background-color: rgba(246, 246, 246, 0.45);
   border-radius: 5px;
+  padding: 0 20px; 
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; 
+
+  &.open {
+    max-height: 500px; 
+    padding: 30px 20px; 
+  }
 }
 
 .collapse-about {
@@ -30,10 +39,6 @@
   .collapse-about-title,
   .collapse-about-text {
     width: 1050px;
-  }
-
-  .collapse-about-text {
-    width: 1010px;
   }
 }
 
@@ -54,8 +59,7 @@
   .btn-description-text,
   .btn-equipments-text {
     width: 600px;
-    height: 145px;
-    padding: 30px 20px;
+    height: 185px;
   }
 }
 
@@ -64,4 +68,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+@keyframes openCollapse {
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
 }

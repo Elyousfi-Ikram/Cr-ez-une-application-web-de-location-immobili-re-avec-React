@@ -19,7 +19,7 @@ function Collapse({ logement, type }) {
     return (
         <div className="collapse">
             {type === "logement" && (
-                <div  className="collapse-logement">
+                <div className="collapse-logement">
 
                     <div>
                         <button className="collapse-title btn-description" onClick={() => toggleSection("description")}>
@@ -30,11 +30,9 @@ function Collapse({ logement, type }) {
                                 <FaChevronUp />
                             )}
                         </button>
-                        {openSections.description && (
-                            <div className="collapse-text btn-description-text">
-                                <p>{logement.description}</p>
-                            </div>
-                        )}
+                        <div className={`collapse-text btn-description-text ${openSections.description ? 'open' : ''}`}>
+                            <p>{logement.description}</p>
+                        </div>
                     </div>
 
                     <div>
@@ -46,17 +44,15 @@ function Collapse({ logement, type }) {
                                 <FaChevronUp />
                             )}
                         </button>
-                        {openSections.equipments && (
-                            <div className="collapse-text btn-equipments-text">
-                                <div className="equipment-container">
-                                    {logement.equipments.map((equipment, index) => (
-                                        <span key={index} className="equipments">
-                                            {equipment}
-                                        </span>
-                                    ))}
-                                </div>
+                        <div className={`collapse-text btn-equipments-text ${openSections.equipments ? 'open' : ''}`}>
+                            <div className="equipment-container">
+                                {logement.equipments.map((equipment, index) => (
+                                    <span key={index} className="equipments">
+                                        {equipment}
+                                    </span>
+                                ))}
                             </div>
-                        )}
+                        </div>
                     </div>
                 </div>
             )}
@@ -69,11 +65,9 @@ function Collapse({ logement, type }) {
                                 {section.title}
                                 {openSections[index] ? <FaChevronDown /> : <FaChevronUp />}
                             </button>
-                            {openSections[index] && (
-                                <div className="collapse-text collapse-about-text">
-                                    <p>{section.content}</p>
-                                </div>
-                            )}
+                            <div className={`collapse-text collapse-about-text ${openSections[index] ? 'open' : ''}`}>
+                                <p>{section.content}</p>
+                            </div>
                         </div>
                     ))}
                 </>
