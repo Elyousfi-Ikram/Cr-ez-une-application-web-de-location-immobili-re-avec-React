@@ -11,9 +11,7 @@ function Logement() {
     }, []); 
 
     return (
-        <div>
-            <InfoLogement logements={logements} />
-        </div>
+        <InfoLogement logements={logements} />
     );
 }
 

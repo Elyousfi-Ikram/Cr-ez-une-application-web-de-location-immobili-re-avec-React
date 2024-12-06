@@ -20,156 +20,169 @@ $width: 100%;
   color: $secondary-color;
 }
 
-.gallery-card {
-  @include display-flex(column, space-between, center);
-  margin: 3% 0;
-  width: 100%;
-}
+.container {
+  height: 115vh;
 
-.carousel {
-  width: 100%;
-  @include display-flex(column, space-between, center);
-
-  .carousel-image {
+  .gallery-card {
+    @include display-flex(column, space-between, center);
     width: 100%;
-    height: 415px;
-    border-radius: 25px;
-    margin-bottom: 30px;
-    object-fit: cover;
-  }
 
-  .carousel-index {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    font-weight: bolder;
-    color: $btn-hover-color;
-  }
+    .carousel {
+      width: 100%;
+      @include display-flex(column, space-between, center);
+      position: relative;
+      margin-bottom: 1%;
 
-  .btn-left,
-  .btn-right {
-    position: absolute;
-    cursor: pointer;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    font-family: $font-family;
-    font-size: 50px;
-    color: $btn-color;
+      .carousel-image {
+        width: 100%;
+        height: 415px;
+        border-radius: 25px;
+        object-fit: cover;
+      }
 
-    &:hover {
-      color: $btn-hover-color;
-    }
-  }
-
-  .btn-left {
-    top: 50%;
-    left: 5%;
-  }
-
-  .btn-right {
-    top: 50%;
-    right: 5%;
-  }
-}
-
-.informations-logement {
-  @include display-flex(row, space-between);
-  width: $width;
-  height: 130px;
-
-  .title-location-tags {
-    @include display-flex(column, space-between, start);
-    margin-bottom: 0;
-    height: 100%;
-
-    .title {
-      line-height: 52px;
-      font-size: 36px;
-      color: $main-color;
-    }
-
-    .location {
-      font-size: 16px;
-      font-weight: 500;
-
-    }
-
-    .tags-container {
-      @include display-flex(row);
-      gap: 20px;
-      height: 40px;
-
-      .tags {
-        padding: 5px 25px;
-        border-radius: 5px;
-        background-color: $main-color;
+      .carousel-index {
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        font-weight: bolder;
         color: $btn-hover-color;
-        font-size: medium;
-        font-weight: 600;
+      }
+
+      .btn-left,
+      .btn-right {
+        position: absolute;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        font-family: $font-family;
+        font-size: 50px;
+        color: $btn-color;
+
+        &:hover {
+          color: $btn-hover-color;
+        }
+      }
+
+      .btn-left {
+        top: 50%;
+        left: 0;
+      }
+
+      .btn-right {
+        top: 50%;
+        right: 0;
       }
     }
-  }
 
-  .host-rating {
-    @include display-flex(column, space-between, flex-end);
-    height: 100%;
-
-    .host {
-      @include display-flex(row, flex-end, center);
-      gap: 10px;
-
-      .name {
-        width: 80px;
-        height: 52px;
-        margin-top: 5px;
-        text-align: end;
-        font-size: large;
-        color: $main-color;
-      }
-
-      .picture {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-      }
-    }
-
-    .rating {
+    .informations-logement {
       @include display-flex(row, space-between);
-      width: 140px;
+      width: $width;
+
+      .title-location-tags {
+        @include display-flex(column, space-between, start);
+        margin-bottom: 0;
+        height: 120px;
+
+        .title {
+          line-height: 52px;
+          font-size: 36px;
+          color: $main-color;
+        }
+
+        .location {
+          font-size: 16px;
+          font-weight: 500;
+
+        }
+
+        .tags-container {
+          @include display-flex(row);
+          gap: 20px;
+          height: 40px;
+
+          .tags {
+            padding: 5px 25px;
+            border-radius: 5px;
+            background-color: $main-color;
+            color: $btn-hover-color;
+            font-size: medium;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .host-rating {
+        @include display-flex(column, space-between, flex-end);
+        height: 120px;
+
+        .host {
+          @include display-flex(row, flex-end, center);
+          gap: 10px;
+
+          .name {
+            width: 80px;
+            height: 52px;
+            margin-top: 5px;
+            text-align: end;
+            font-size: large;
+            color: $main-color;
+          }
+
+          .picture {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+          }
+        }
+
+        .rating {
+          @include display-flex(row, space-between);
+          width: 140px;
+          height: 40px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .collapse-logement {
+      display: flex;
+      gap: 6%;
       height: 40px;
-      font-size: 20px;
+      margin-top: 15px;
+
+      .content-equipments {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
-
-
-.collapse-logement {
-  height: 40px;
-  display: flex;
-  gap: 6%;
-  margin-top: 15px;
-}
-
-
 
 @media (max-width: 768px) {
-  .informations-logement {
-    @include display-flex(column);
-    width: $width;
+  .container {
+    height: 165vh;
 
-    .title-location-tags {
-      @include display-flex(column, center, flex-start);
-      width: 100%;
-      
+    .gallery-card {
+      .informations-logement {
+        @include display-flex(column);
+        width: $width;
+
+        .title-location-tags {
+          width: 100%;
+        }
+
+        .host-rating {
+          @include display-flex(row-reverse, space-between);
+          width: 100%;
+          height: min-content;
+        }
+      }
+
+      .collapse-logement {
+        display: flex;
+        flex-direction: column;
+      }
     }
-
-    .host-rating {
-      @include display-flex(row-reverse, space-between);
-      width: 100%;
-      height: min-content;
-    }    
   }
-
 }
