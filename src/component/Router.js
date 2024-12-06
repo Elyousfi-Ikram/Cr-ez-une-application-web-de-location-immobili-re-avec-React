@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate } from "react-router-dom"; 
-import Accueil from "../Page/Accueil/Accueil";
+import Accueil from "../Page/Accueil/accueil";
 import About from '../Page/About/about';
 import Logement from '../Page/Logement/logement';
 import Erreur from "../Page/Erreur/erreur";

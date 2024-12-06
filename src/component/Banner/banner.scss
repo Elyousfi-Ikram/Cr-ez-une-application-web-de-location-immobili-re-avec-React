@@ -1,41 +1,42 @@
-.banner {
+$banner-height: 220px;
+$font-family: 'Montserrat';
+$font-size: 48px;
+$font-weight: 700;
+$white-color: white;
+$brightness-filter: 60%;
+$border-radius: 25px;
+
+[class*="banner"] {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 3% 0;
-  font-size: 20px;
+  width: 100%;
+  height: $banner-height;
 
-  .banner-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
+  .accueil-text {
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    text-align: center;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $white-color;
+  }
 
-    .logo-kasa {
-      height: 100%;
-      max-height: 80px;
-    }
+  .img-banner {
+    object-fit: cover;
+    filter: brightness($brightness-filter);
+    border-radius: $border-radius;
+    width: 100%;
+  }
+}
 
-    .banner-link {
-      display: flex;
-      flex-direction: row;
-      gap: 40px;
-      align-items: center;
-      height: 100%;
-
-      a {
-        color: black;
-        text-decoration: none;
-        transition: text-decoration 0.3s ease;
-
-        &:hover,
-        &:active,
-        &:focus {
-          text-decoration: underline;
-        }
-      }
+@media (max-width: 768px) {
+  [class*="banner"] {
+    .accueil-text {
+      width: 60%;
+      text-align: start;
     }
   }
 }

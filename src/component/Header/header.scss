@@ -1,0 +1,41 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0;
+  font-size: 20px;
+
+  .Header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .logo-kasa {
+      height: 100%;
+      max-height: 80px;
+    }
+
+    .Header-link {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+      height: 100%;
+
+      a {
+        color: black;
+        text-decoration: none;
+        transition: text-decoration 0.3s ease;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -2,17 +2,15 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom"; 
 import Router from "./component/Router"; 
 
-import Banner from "./component/Banner/banner"; 
+import Header from "./component/Header/header"; 
 import Footer from "./component/Footer/footer"; 
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Banner />
+        <Header />
         <Router />
         <Footer />
-      </div>
     </BrowserRouter>
   );
 }

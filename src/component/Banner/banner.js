@@ -1,22 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import '../Banner/banner.scss'
 
-import './banner.scss';
+import imgBannerAbout from '../..//Assets/img-banner-about.png'
+import imgBannerAccueil from '../../Assets/img-banner-accueil.png'
 
-import logo from '../../Assets/logo.png'
+function Banner({ type }) {
 
-function Banner() {
+
+
     return (
-        <div className="banner">
-            <div className='banner-content'>
-                <img src={logo} alt='logo' className='logo-kasa' />
-                <div className='banner-link'>
-                    <Link to="/" className='banner-accueil'>Accueil</Link>
-                    <Link to="/about" className='banner-propos'>A Propos</Link>
+        <div>
+            {type === "banner-about" && (
+                <div>
+                    <div className='banner-about'>
+                        <img src={imgBannerAbout} alt='' className='img-banner' />
+                    </div>
                 </div>
-            </div>
+            )}
+            
+            {type === "banner-accueil" && (
+                <div>
+                    <div className='banner-accueil'>
+                        <p className='accueil-text'>Chez vous, partout et ailleurs</p>
+                        <img src={imgBannerAccueil} alt='' className='img-banner' />
+                    </div>
+                </div>
+            )}
         </div>
     )
+
 }
 
 export default Banner;
+
+
