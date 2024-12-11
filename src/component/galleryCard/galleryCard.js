@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import '../galleryCard/galleryCard.scss';
+
 function GalleryCard({ data }) { 
 
     return (

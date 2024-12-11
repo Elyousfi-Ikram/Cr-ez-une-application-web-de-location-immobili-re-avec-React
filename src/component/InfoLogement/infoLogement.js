@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight, FaStar, FaTimes } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 
-import Collapse from '../Collapse/collapse.js';
-import Erreur from '../../Page/Erreur/erreur.js';
+import Collapse from '../collapse/collapse';
+import Erreur from '../../page/erreur/erreur';
+import Modal from '../modal/modal';
 
-import "./infoLogement.scss";
-import '../Modal/modal.scss';
+import './infoLogement.scss';
+import '../modal/modal.scss';
 
 function InfoLogement({ logements }) {
     const { id } = useParams();
-
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -28,6 +28,9 @@ function InfoLogement({ logements }) {
         setCurrentImageIndex((prevIndex) => (prevIndex - 1 + logement.pictures.length) % logement.pictures.length);
     };
 
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     function ratingToStars(nbStars) {
         return Array.from({ length: 5 }, (_, index) => (
             index < nbStars ? (
@@ -37,9 +40,6 @@ function InfoLogement({ logements }) {
             )
         ));
     }
-
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
 
     return (
         <main className="container">
@@ -69,37 +69,16 @@ function InfoLogement({ logements }) {
                 </div>
 
                 {isModalOpen && (
-                    <div className="modal" onClick={closeModal}>
-                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                            <button className="modal-close" aria-label="Fermer la modale" onClick={closeModal}>
-                                <FaTimes />
-                            </button>
-                            {logement.pictures.length > 1 && (
-                                <>
-                                    <button className="btn-left-modal" aria-label="Afficher l'image précédente" onClick={prevImage}>
-                                        <FaChevronLeft />
-                                    </button>
-                                    <button className="btn-right-modal" aria-label="Afficher l'image suivante" onClick={nextImage}>
-                                        <FaChevronRight />
-                                    </button>
-                                </>
-                            )}
-                            <img
-                                className="modal-image"
-                                src={logement.pictures[currentImageIndex]}
-                                alt={`Logement ${currentImageIndex + 1}`}
-                            />
-                            {logement.pictures.length > 1 && (
-                                <p className="modal-index">
-                                    {currentImageIndex + 1} / {logement.pictures.length}
-                                </p>
-                            )}
-                        </div>
-                    </div>
+                    <Modal
+                        logement={logement}
+                        closeModal={closeModal}
+                        currentImageIndex={currentImageIndex}
+                        setCurrentImageIndex={setCurrentImageIndex}
+                    />
                 )}
 
-                <div className="informations-logement">
 
+                <div className="informations-logement">
                     <div className="title-location-tags">
                         <div>
                             <p className="title">{logement.title}</p>
@@ -121,19 +100,17 @@ function InfoLogement({ logements }) {
                         </div>
                         <span className="rating">{ratingToStars(logement.rating)}</span>
                     </div>
-
                 </div>
 
                 <div className="collapse-logement">
-                    <Collapse title={"Description"} content={logement.description} />
-                    <Collapse title={"Equipements"} content={
-                         <div className="content-equipments">
-                         {logement.equipments.map((equipment, item) => (
-                           <div key={item}>{equipment}</div>
-                         ))}
-                       </div>
+                    <Collapse key={`description-${logement.id}`} className="collapse-description" title={'Description'} content={logement.description} />
+                    <Collapse key={`equipments-${logement.id}`} className="collapse-equipments" title={'Equipements'} content={
+                        <ul className="equipments">
+                            {logement.equipments.map((equipment, item) => (
+                                <li key={item}>{equipment}</li>
+                            ))}
+                        </ul>
                     } />
-
                 </div>
             </div>
         </main>

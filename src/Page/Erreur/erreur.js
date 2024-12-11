@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import "../Erreur/erreur.scss";
+
+import "../erreur/erreur.scss";
 
 function Erreur() {
 

@@ -1,0 +1,60 @@
+.logement-card {
+    position: relative;
+    display: block;
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    & > * {
+      border-radius: 10px;
+    }
+
+    .cover-card {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .title-card {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: white;
+      font-weight: 500;
+      width: 100%;
+      height: 130px;
+      overflow-wrap: break-word;
+      z-index: 2;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 13%, rgba(0, 212, 255, 0) 70%);
+
+      .title-text {
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        width: 60%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .Gallery {
+      background-color: white;
+      margin: 5% auto;
+  
+      .gallery-content {
+        grid-template-areas: "card";
+        padding: 0px;
+        gap: 20px;
+      }
+  
+      .logement-card {
+        height: 450px;
+  
+        .title-card {
+          font-size: large;
+        }
+      }
+    }
+  }

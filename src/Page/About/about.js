@@ -1,15 +1,18 @@
 import React from "react";
 
-import Collapse from '../../component/Collapse/collapse.js';
-import Banner from '../../component/Banner/banner.js';
-import data from '../../datas/about.json';
+import Collapse from '../../component/collapse/collapse';
+import Banner from '../../component/banner/banner';
 
 import './about.scss';
+
+import data from '../../datas/about.json';
+
+import img from '../..//Assets/img-banner-about.png';
 
 function About() {
     return (
         <div>
-            <Banner type="banner-about" />
+            <Banner text={''} img={img} />
             <div className="collapse-about">
                 {data.map((item) => (
                     <Collapse title={item.title} content={item.content} key={item.title} />

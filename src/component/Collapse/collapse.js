@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import '../Collapse/collapse.scss';
+
+import './collapse.scss';
 
 function Collapse({ title, content }) {
 
@@ -11,14 +12,16 @@ function Collapse({ title, content }) {
     };
 
     return (
-        <div className="collapse" key={title}>
+        <div className={`collapse`} key={title}>
             <button className="collapse-title" >
                 {title}
-                {isOpen ? <FaChevronDown onClick={() => toggleState(isOpen)} /> : <FaChevronUp onClick={() => toggleState(isOpen)} />}
+                {isOpen ? <FaChevronDown className='chevron' onClick={toggleState} /> : <FaChevronUp className='chevron' onClick={toggleState} />}
             </button>
-            <div className={`collapse-content ${isOpen ? ' open' : ''}`}>
-                <p>{content}</p>
-            </div>
+            {isOpen && (
+                <div className={`collapse-content${isOpen ? ' open' : ''}`}>
+                    {content}
+                </div>
+            )}
         </div>
     );
 }

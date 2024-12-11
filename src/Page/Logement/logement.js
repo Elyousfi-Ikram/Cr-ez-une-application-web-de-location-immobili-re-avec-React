@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import InfoLogement from '../../component/InfoLogement/infoLogement';
+
+import InfoLogement from '../../component/infoLogement/infoLogement';
 
 import logementsData from '../../datas/logements.json';
 

@@ -15,10 +15,12 @@ body {
   }
 
   #root {
-    margin: 0 5%;
-
     & > * {
-      width: 100%;
+      max-width: 100%;
+    }
+
+    .Header, .main {
+      margin: 0 5%;
     }
   }
 }

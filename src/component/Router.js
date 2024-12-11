@@ -1,8 +1,9 @@
 import { Route, Routes, Navigate } from "react-router-dom"; 
-import Accueil from "../Page/Accueil/accueil";
-import About from '../Page/About/about';
-import Logement from '../Page/Logement/logement';
-import Erreur from "../Page/Erreur/erreur";
+
+import Accueil from '../page/accueil/accueil';
+import About from '../page/about/about';
+import Logement from '../page/logement/logement';
+import Erreur from '../page/erreur/erreur';
 
 import logements from '../datas/logements.json'; 
 

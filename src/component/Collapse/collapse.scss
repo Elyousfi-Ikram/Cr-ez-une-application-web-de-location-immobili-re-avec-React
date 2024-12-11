@@ -1,15 +1,20 @@
+$border-radius: 5px;
+$height: 40px;
+
 .collapse {
   flex: 1;
+  background-color: rgba(246, 246, 246, 0.45);
+  border-radius: $border-radius;
+  height: fit-content;
 
   .collapse-title {
     position: relative;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 40px;
-    border-radius: 5px;
+    height: $height;
+    border-radius: $border-radius;
     padding: 0 15px;
     background-color: #FF6060;
     color: white;
@@ -17,25 +22,26 @@
     font-weight: bold;
     text-align: left;
     border: none;
+
+    .chevron {
+      cursor: pointer;
+    }
   }
 
   .collapse-content {
-    margin-top: -7px;
     max-height: 0;
     overflow: hidden;
-    background-color: rgba(246, 246, 246, 0.45);
-    border-radius: 5px;
-    padding: 0 20px;
     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
 
     &.open {
       max-height: 500px;
-      padding: 30px 20px;
+      padding: 15px 20px;
+      height: 160px;
     }
   }
 }
 
-@keyframes openCollapse {
+@keyframes opencollapse {
   from {
     transform: translateY(20px);
   }
@@ -46,14 +52,10 @@
 }
 
 @media (max-width: 768px) {
-  .collapse {
 
-    .collapse-about {
-
-      .collapse-about-title,
-      .collapse-about-text {
-        width: 100%;
-      }
-    }
+  .collapse-about-title,
+  .collapse-about-text {
+    width: 100%;
   }
+
 }
