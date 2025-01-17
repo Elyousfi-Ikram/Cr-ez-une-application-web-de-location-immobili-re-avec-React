@@ -1,7 +1,6 @@
 import './banner.scss';
 
 function Banner({ text, img }) {
-
     return (
         <div className='banner'>
             { text !== '' &&
@@ -10,7 +9,6 @@ function Banner({ text, img }) {
             <img src={img} alt='' className='img-banner' />
         </div>
     )
-
 }
 
 export default Banner;

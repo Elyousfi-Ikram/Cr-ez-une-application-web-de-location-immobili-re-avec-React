@@ -39,3 +39,17 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .Header {  
+    .Header-content {  
+      .logo-kasa {
+        height: 35px;
+      }
+  
+      .Header-link {
+        gap: 10px;
+      }
+    }
+  }
+}

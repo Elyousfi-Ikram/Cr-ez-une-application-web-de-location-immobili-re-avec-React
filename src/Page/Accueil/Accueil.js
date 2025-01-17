@@ -5,7 +5,7 @@ import Banner from '../../component/banner/banner';
 
 import './accueil.scss';
 
-import img from '../../Assets/img-banner-accueil.png';
+import img from '../../assets/img-banner-accueil.png';
 
 function Accueil() {
 

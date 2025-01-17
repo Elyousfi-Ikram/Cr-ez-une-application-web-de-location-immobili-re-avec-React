@@ -42,7 +42,7 @@ $width: 100%;
       .carousel-index {
         position: absolute;
         bottom: 2%;
-        left: 50%;
+        left: 45%;
         font-weight: bolder;
         color: $btn-hover-color;
       }
@@ -81,7 +81,6 @@ $width: 100%;
       .title-location-tags {
         @include display-flex(column, space-between, start);
         margin-bottom: 0;
-        height: 120px;
 
         .title {
           line-height: 52px;
@@ -92,7 +91,6 @@ $width: 100%;
         .location {
           font-size: 16px;
           font-weight: 500;
-
         }
 
         .tags-container {
@@ -167,12 +165,17 @@ $width: 100%;
 
         .title-location-tags {
           width: 100%;
+
+          .title{
+            line-height: 45px
+          }
         }
 
         .host-rating {
           @include display-flex(row-reverse, space-between);
           width: 100%;
           height: min-content;
+          margin: 9px 0 0px 0;
         }
       }
 

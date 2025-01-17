@@ -36,26 +36,23 @@ $height: 40px;
     &.open {
       max-height: 500px;
       padding: 15px 20px;
-      height: 160px;
+      animation: opencollapse 0.4s ease-out;
     }
   }
 }
 
 @keyframes opencollapse {
   from {
-    transform: translateY(20px);
+    transform: translateY(-15px);
   }
-
   to {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 
 @media (max-width: 768px) {
-
   .collapse-about-title,
   .collapse-about-text {
     width: 100%;
   }
-
 }

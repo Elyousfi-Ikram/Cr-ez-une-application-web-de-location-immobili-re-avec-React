@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import './header.scss';
 
-import logo from '../../Assets/logo.png';
+import logo from '../../assets/logo.png';
 
 function Header() {
     return (

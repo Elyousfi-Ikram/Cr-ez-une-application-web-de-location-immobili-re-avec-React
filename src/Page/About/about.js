@@ -7,7 +7,7 @@ import './about.scss';
 
 import data from '../../datas/about.json';
 
-import img from '../..//Assets/img-banner-about.png';
+import img from '../..//assets/img-banner-about.png';
 
 function About() {
     return (
